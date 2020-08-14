@@ -7,8 +7,7 @@ services:
             dockerfile: Dockerfile
         volumes:
          - /var/www/html:/app/html
-        tty: true
-        environment: 
+        environment:
          - LINE_ACCESS_TOKEN
          - LINE_SECRET_KEY
          - OP_CHALLENGE_CONSUMER_KEY
