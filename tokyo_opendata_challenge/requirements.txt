@@ -1,0 +1,7 @@
+numpy
+pandas
+folium
+pillow
+line-bot-sdk
+pytest
+selenium
