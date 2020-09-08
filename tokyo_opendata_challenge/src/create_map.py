@@ -42,7 +42,7 @@ class op_folium():
             tmp_df = station_df[station_df["odpt:railway"]==railway]
             selected_df = pd.concat([selected_df, tmp_df])
         mask = selected_df[["geo:lat", "geo:long"]].dropna(how="any", axis=0).index
-        selected_df = selected_df[mask]
+        selected_df = selected_df.loc[mask]
         return selected_df
     
     
