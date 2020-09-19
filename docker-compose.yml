@@ -1,7 +1,7 @@
 version: "3.4"
 services:
     op_challenge:
-        container_name: op_challenge
+        container_name: "${CONTAINER_NAME}"
         build:
             context: ./
             dockerfile: Dockerfile
