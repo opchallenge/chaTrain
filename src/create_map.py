@@ -1,5 +1,7 @@
 import os
 import sys
+import datetime
+import re
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 sys.path.append(str(Path(__file__).parent.parent / "src"))
@@ -16,14 +18,17 @@ from selenium import webdriver
 class op_folium():
     
     def __init__(self, conf="/conf/config.ini", offset_lat=35.681300, offset_long=139.76704):
+        dt_now = str(datetime.datetime.now())
+        dt_now = re.sub('[ -/:-@\[-~]', '', dt_now)
+        
         config = configparser.ConfigParser()
         config.read(conf, encoding="utf-8")
         self.html = config["MAP"]["html"]
         self.url = config["MAP"]["url"]
-        self.png = config["MAP"]["png"]
+        self.png = config["MAP"]["png"].replace("#datetime", dt_now)
         self.station_path = config["MAP"]["station_path"]
         self.railway_path = config["MAP"]["railway_path"]
-        
+    
         self.delay_railways = []
         self.station_df = self.fetch_station_df()
         self.m = folium.Map(

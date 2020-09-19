@@ -5,3 +5,5 @@ pillow
 line-bot-sdk
 pytest
 selenium
+bs4
+flask

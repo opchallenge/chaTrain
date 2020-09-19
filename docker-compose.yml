@@ -6,9 +6,11 @@ services:
             context: ./
             dockerfile: Dockerfile
         volumes:
-         - /var/www/html:/app/html
+         - /var/www/html/map:/app/html
         tty: true
         environment: 
          - LINE_ACCESS_TOKEN
          - LINE_SECRET_KEY
+         - LINE_ACCESS_TOKEN_TEST
+         - LINE_SECRET_KEY_TEST
          - OP_CHALLENGE_CONSUMER_KEY
