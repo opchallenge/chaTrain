@@ -1,0 +1,25 @@
+{
+  "type": "flex",
+  "altText": "TrainInformation",
+  "contents": {
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://yasai-2020op.cf/map/#png",
+      "size": "full",
+      "aspectRatio": "20:13",
+      "aspectMode": "cover",
+      "action": {
+        "type": "uri",
+        "label": "Action",
+        "uri": "https://yasai-2020op.cf/map/trainInformation_test.html"
+      }
+    },
+    "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+        ]
+      }
+  }
+}
