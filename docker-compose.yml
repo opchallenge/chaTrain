@@ -5,7 +5,7 @@ services:
         build:
             context: ./
             dockerfile: Dockerfile
-        image: chaTrain
+        image: chatrain
         volumes:
          - /var/www/html:/app/html
         tty: true
