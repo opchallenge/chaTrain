@@ -10,6 +10,8 @@ services:
          - /var/www/html:/app/html
         tty: true
         environment: 
+         - LINE_ACCESS_TOKEN_TEST
+         - LINE_SECRET_KEY_TEST
          - LINE_ACCESS_TOKEN
          - LINE_SECRET_KEY
          - OP_CHALLENGE_CONSUMER_KEY
